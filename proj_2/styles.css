@@ -1,0 +1,89 @@
+body { 
+    margin: 0px;
+    background: rgb(39, 40, 34); 
+    font-family: monospace;
+    color: rgb(158, 134, 200);
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    display: block;
+    border: 2px solid;
+    border-color: rgb(121, 121, 121);
+    border-radius: 5px;
+}
+
+table {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-top: 1px dotted white;
+}
+
+form {
+    width: 40%;
+    background-color: rgb(54, 55, 57);
+    margin: 0 auto; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid lightgray;
+    text-align: center;
+}
+
+header {
+    font-size: 25px;
+    margin:  0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    margin:  0 auto;
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 50px;
+    position: relative;
+}
+
+nav a {
+    cursor: pointer;
+}
+
+select, input {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#headerDiv {
+    width: 100%;
+    background-color: rgb(64, 64, 64);
+}
+
+#headerDiv a {
+    font-size: 20px;
+}
+
+#canvasDiv {
+    display: none;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+a:link { color: rgb(102,217,239); }
+a:visited { color: rgb(108, 153, 187); }
+a:hover { color: rgb(214, 214, 214); }

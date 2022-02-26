@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta http-equiv = "Content-type" content = "text/html; charset=utf-8">
+        <script src="main.js"></script>
+        <link type="text/css" href="styles.css" rel="stylesheet" />
+        <title>projekt 1 Adam Łaba</title>
+    </head>
+    <body>
+        <div id="headerDiv">
+            <header>
+                <h1>Rozszczepienie światła w pryzmacie</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a onclick="showIntroduction()">Wstęp</a>
+                        </li>
+                        <li>
+                            <a onclick="showDescription()">Teoria</a>
+                        </li>
+                        <li>
+                            <a onclick="showSimDescription()">Opis symulacji</a>
+                        </li>
+                        <li>
+                            <a onclick="showCanvas()">Symulacja</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div id="introDiv" class="textDiv">
+            <article class="descriptionArt">
+                <h2>
+                    Zjawisko rozszczepienia światła
+                </h2>
+                Polega na rozdzieleniu się fali składającej się z kilku barw na składowe o różnej długości fali.
+                <p>W naturze często spotykane jest rozszczepienie zachodzące w kroplach wody.</p>
+                <img src="images/rainbow.jpg" alt="image missing"/>
+                <p>W warunkach laboratoryjnych, możemy uzyskać ten efekt przy wykorzystaniu siatki dyfrakcyjnej</p>
+                <img src="images/diffraction_grating.jpg" alt="image missing"/>
+                <p>Lub użwając pryzmatu</p>
+                <img src="images/prism.jpg" alt="image missing"/>
+            </article>
+            <footer>
+                <h3>Wykorzystane obrazy są udostępnione na licencji Creative Commons</h3>
+                <a href="https://commons.wikimedia.org/wiki/File:Rainbow_in_Budapest.jpg">Tęcza,</a> autor: <a href="https://commons.wikimedia.org/wiki/User:Takkk">Takkk</a>&emsp;
+                <a href="https://commons.wikimedia.org/wiki/File:Diffraction_Grating.jpg">Siatka dyfrakcyjna,</a> autor: <a href="https://commons.wikimedia.org/w/index.php?title=User:Nani.nerd">Naia B.</a>&emsp;
+                <a href="https://commons.wikimedia.org/wiki/File:Light_dispersion_of_a_mercury-vapor_lamp_with_an_Amici_direct-vision_prism_PNr%C2%B00123.jpg">Pryzmat,</a> autor: <a href="https://commons.wikimedia.org/wiki/User:D-Kuru">D-Kuru</a>&emsp;
+            </footer>
+        </div>
+        <div id="descriptionDiv" class="textDiv">
+            <article class="descriptionArt">
+                <h2>
+                    Refrakcja
+                </h2>
+                Zjawisko to polega na zmianie kierunku rozchodzenia się fali przy przejściu do innego ośrodka. Wiąże się to ze zmianą długości fali i jej prędkości, natomiast częstotliwość pozostaje stała. W optyce, tym zjawiskiem rządzi prawo Snella:
+                <br><br>
+                <img src="images/snell.jpg" alt="image missing"/>
+                Gdzie:<br>
+                α - kąt między promieniem padającym a normalną<br>
+                β - kąt między promieniem załamanym a normalną<br>
+                n1 - współczynnik załamania światła pierwszego ośrodka<br>
+                n2 - współczynnik załamania światła drugiego ośrodka<br>
+            </article>
+            <article class="descriptionArt">
+                <h2>
+                    Rozszczepienie światła
+                </h2>
+                Zjawisko to polega na rozdzieleniu się fali składającej się z kilku barw na składowe o różnej długości fali. Wynika to z faktu, że współczynnik załamania jest różny dla różnych długości fali. Zależność ta jest opisywana przez równanie Sellmeierea, które dla szkła przyjmuje postać:
+                <br><br>
+                <img src="images/sellmeier.jpg" alt="image missing"/>
+                Gdzie:<br>
+                B, C - wyznaczone empirycznie stałe nazywane współczynnikami Sellmeiera, charakterystyczne dla danego materiału.<br>
+            </article>
+            <article class="descriptionArt">
+                <h2>
+                    Pryzmat
+                </h2>
+                Pryzmat jest przeźroczystym blokiem o dwóch płaskich ścianach nachylonych do siebie pod kątem ω. Przy przejściu białego światła przez pryzmat, na obu ścianach obserwujemy zjawisko refrakcji (a co za tym idzie rozszczepienie światła). Wykorzystywany jest do analizy widmowej światła.
+                <br>
+            </article>
+        </div>
+        <div id="simDescriptionDiv" class="textDiv">
+            <h2>
+                Krótki opis symulacji
+            </h2>
+            Kąt ω między ścianami pryzmatu jest stały i ma wartość 62°.<br>
+            Użytkownik może dowolnie zmieniać:<br>
+            <ul>
+                <li>Tryb symulacji (dynamiczny/statyczny)</li>
+                <li>Wartość kąta α (jest to kąt między promieniem światła białego a prostą poziomą)</li>
+                <li>Ilość promienii, na które rozszczepia się światło białe</li>
+                <li>Względny współczynnik załamania światła</li>
+            </ul>
+            W trybie dynamicznym bieg promieni rysowany jest na bieżąco. Został zrealizowany przy wykorzystaniu funkcji asynchronicznych.<br>
+            Względny współczynnik załamania oznacza stosunek współczynnika załamania światła pryzmatu do współczynnika załamania otoczenia.<br><br>
+            Parametry wybierane przez użytkownika są ograniczone tak, aby symulacja prezentowała jedynie zjawisko rozszczepienia.<br>
+            Symulacja nie uwzględnia zjawiska odbicia fali na granicy ośrodków.<br>
+            Współczynniki załamania nie są obliczane przy wykorzystaniu równania Sellmeiera (korzystając z tego równania, wiązka wychodząca z pryzmatu była bardzo wąska i efekt wizualny nie był zadowalający).<br>
+            Współczynniki załamania dla różnych długości fali należą do przedziału &lt;0.9n, 1.1n&gt; i są obliczane z proporcji - dla barwy czerwonej mamy 0.9n, dla zielonej n, a dla fioletowej - 1.1n.<br>
+        </div>
+        <div id="canvasDiv">
+            <canvas id="canvas">
+            </canvas>
+            <table id = "canvasSettings">
+                <tr>
+                    <td>
+                        Tryb dynamiczny
+                    </td>
+                    <td>
+                        Kąt α: <span id="alphaValue"></span>
+                    </td>
+                    <td>
+                        Ilość promieni: <span id="numRays"></span>
+                    </td>
+                    <td>
+                        Względny współczynnik załamania: <span id="nValue"></span>
+                    </td>
+                </tr>  
+                <tr>
+                    <td>
+                        <input type="checkbox" id="modeCheckbox" class="checkBox" checked="" onchange="draw()">
+                    </td>
+                    <td>
+                        <input type="range" min="10" max="30" value="10" class="slider" id="alphaAngleSlider" onchange="draw()" oninput="draw()">
+                    </td>
+                    <td>
+                        <input type="range" min="4" max="70" value="4" class="slider" id="numRaysSlider" onchange="draw()" oninput="draw()">
+                    </td>
+                    <td>
+                        <input type="range" min="-23" max="23" value="-23" class="slider" id="nSlider" onchange="draw()" oninput="draw()">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+ </html>
